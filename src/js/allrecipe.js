@@ -2,19 +2,19 @@ const apiKey = "e0f6e22e1f944acaaec181c9e011de7b";
 async function searchRecipes() {
     const searchQuery = document.getElementById("search_query").value;
     try {
-        const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?${apiKey}&query=${searchQuery}`);
+        const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}`);
         const data = await response.json();
         const recipeList = document.getElementById("search_result_list");
         recipeList.innerHTML = "";
         if (data.results.length == 0) {
             recipeList.innerHTML = "Sorry, we don't have it for you. You have to pay";
         } else {
-            data.results.array.forEach(recipe => {
+            data.results.forEach(recipe => {
                 const recipeItem = document.createElement("a");
                 recipeItem.className = "search_result_element";
 
                 const search_result_title = document.createElement("div");
-                recipeItem.className = "search_result_title";
+                recipeItem.search_result_title = "search_result_title";
                 recipeItem.textContent = recipe.title;
 
                 const search_result_detail = document.createElement("p");
@@ -22,6 +22,7 @@ async function searchRecipes() {
                 search_result_detail.textContent = recipe.detail;
 
                 const search_result_photo = document.createElement("img");
+                search_result_detail.textContent = `Calories: ${recipe.nutrition.calories}, Carbs: ${recipe.nutrition.carbs}, Fat: ${recipe.nutrition.fat}`;
                 search_result_photo.className = "search_result_photo;"
                 search_result_photo.src = recipe.image;
                 search_result_photo.alt = recipe.title;
@@ -32,7 +33,7 @@ async function searchRecipes() {
                 recipeItem.appendChild(search_result_title);
                 recipeItem.appendChild(search_result_detail);
                 recipeItem.appendChild(search_result_photo);
-                recipeItem.appendChild(search_result_element);
+                recipeList.appendChild(recipeItem);
 
             });
         }
@@ -40,4 +41,3 @@ async function searchRecipes() {
         console.error("Houston tenemos un problema con el Fetch", error);
     }
 }
-
