@@ -176,4 +176,3 @@ The Recipe Book Application will provide users with a modern,
 interactive way to find, save, and view recipes. By leveraging the
 Spoonacular API, the app meets all project requirements while offering
 practical functionality for everyday use.
-
