@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "3d55a5ce-2b8e-42d6-a3e2-f8d4848f6ae5",
+		"name": "Spoonacular API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23454446"
+	},
+	"item": [
+		{
+			"name": "Search Recipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spoonacular.com/recipes/complexSearch?apiKey={{apiKey}}&query=chicken&cuisine=american",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"complexSearch"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "query",
+							"value": "chicken"
+						},
+						{
+							"key": "cuisine",
+							"value": "american"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Recipes by Nutrients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spoonacular.com/recipes/findByNutrients?apiKey={{apiKey}}&minCarbs=10&maxCarbs=50&number=2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"findByNutrients"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "minCarbs",
+							"value": "10"
+						},
+						{
+							"key": "maxCarbs",
+							"value": "50"
+						},
+						{
+							"key": "number",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Recipes by Ingredients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spoonacular.com/recipes/findByIngredients?apiKey={{apiKey}}&ingredients=apples, flour, sugar&number=2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"findByIngredients"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "ingredients",
+							"value": "apples, flour, sugar"
+						},
+						{
+							"key": "number",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Recipe Information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spoonacular.com/recipes/638420/information?apiKey={{apiKey}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"638420",
+						"information"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Similar Recipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spoonacular.com/recipes/638420/similar?apiKey={{apiKey}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spoonacular",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"638420",
+						"similar"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
