@@ -2,7 +2,7 @@ const apiKey = "e0f6e22e1f944acaaec181c9e011de7b";
 async function searchRecipes() {
     const searchQuery = document.getElementById("search_query").value;
     try {
-        const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch`);
+        const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?${apiKey}&query=${searchQuery}`);
         const data = await response.json();
         const recipeList = document.getElementById("search_result_list");
         recipeList.innerHTML = "";
@@ -40,3 +40,4 @@ async function searchRecipes() {
         console.error("Houston tenemos un problema con el Fetch", error);
     }
 }
+
