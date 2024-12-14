@@ -1,0 +1,17 @@
+{
+  "name": "recipe_realm",
+  "version": "1.0.0",
+  "description": "A user-friendly platform where users can search for recipes, and quickly access detailed instructions, and nutritional data, simplifying meal preparation.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Robert Gerard Govia Suarez <gov19001@byui.edu>",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.8.3"
+  },
+  "devDependencies": {
+    "svgo": "^3.3.2"
+  }
+}
