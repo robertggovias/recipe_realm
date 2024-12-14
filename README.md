@@ -42,7 +42,7 @@ to recipes and the ability to organize them effectively.
 ####  
 
 #### **Wireframes** ![]
-<div style:"width:50%", display:block">(./image1.jpg)</div>
+(./image1.jpg)
 {width="1073px" height="2020px"}![](./image3.jpg){width="1073px" height="2020px"}
 
 ##### **Mobile Wireframe**
