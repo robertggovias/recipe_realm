@@ -41,9 +41,7 @@ to recipes and the ability to organize them effectively.
 
 ####  
 
-#### **Wireframes** ![]
-(./image1.jpg)
-{width="1073px" height="2020px"}![](./image3.jpg){width="1073px" height="2020px"}
+#### **Wireframes** ![](./image1.jpg){width="1073px" height="2020px"}![](./image3.jpg){width="1073px" height="2020px"}
 
 ##### **Mobile Wireframe**
 
@@ -63,26 +61,20 @@ to recipes and the ability to organize them effectively.
 
 ##### **Desktop Wireframe**
 
--   **Home Page**: Full-width search bar, grid layout for recipes, and
-    > sidebar for
-    > filters.![](./image4.jpg){width="6.283464566929134in"
-    > height="3.5416666666666665in"}
+-   **Home Page**: Full-width search bar, grid layout for recipes, and sidebar for filters.
+    ![](./image4.jpg)
 
--   **Recipe Details Page**: Split view with the image and details on
-    > the left, and steps on the right.
+-   **Recipe Details Page**: Split view with the image and details on the left, and steps on the right.
 
-![](./image2.jpg){width="6.283464566929134in"
-height="3.5416666666666665in"}
+![](./image2.jpg)
 
--   **(optional) Saved Recipes Page**: Grid layout for saved recipes
-    > with larger images.
+-   **(optional) Saved Recipes Page**: Grid layout for saved recipes with larger images.
 
 #### **Colors/Typography/Specific Styling**
 
 **Colors:**
 
--   Light Mode: White background with blue and gray accents (fonts and
-    > elements).
+-   Light Mode: White background with blue and gray accents (fonts and elements).
 
 > ●●●●
 >
@@ -183,4 +175,3 @@ The Recipe Book Application will provide users with a modern,
 interactive way to find, save, and view recipes. By leveraging the
 Spoonacular API, the app meets all project requirements while offering
 practical functionality for everyday use.
-
