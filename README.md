@@ -41,7 +41,8 @@ to recipes and the ability to organize them effectively.
 
 ####  
 
-#### **Wireframes** ![](./image1.jpg){width="1073px" height="2020px"}![](./image3.jpg){width="1073px" height="2020px"}
+#### **Wireframes**
+![](./image1.jpg){: width=450px style="display:inline"} ![](./image3.jpg){: width=450px style="display:inline"}
 
 ##### **Mobile Wireframe**
 
