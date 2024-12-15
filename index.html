@@ -15,12 +15,14 @@
         <div class="search-div" id="search_query">
             <h1 class="search_title">Explore tasty ideas</h1>
             <form>
-                <input class="search_bar" data-id="search_bar" placeholder="What to make for dinner tonight??">
+                <input type="text" class="search_bar" data-id="search_bar" placeholder="What to make for dinner tonight??">
+                <button type="submit" id="search-button" onclick="searchRecipes()">🔍</button>
             </form>
+            <button type="submit" id="search-button" onclick="ppp()">🔍</button>
         </div>
         <div class="search-div" id="result">
             <div class="search_result_list" id="search_result_list">
-                <a class="search_result_element" href="/src/pages/recipe.html">
+                <!-- <a class="search_result_element" href="/src/pages/recipe.html">
                     <div class="search-result-text">
                         <div class="search_result_title" data-id="search_result_title">Thai Red Curry Yellowtail Thai
                             Red Curry Yellowtail Thai Red Curry Yellowtail</div>
@@ -52,11 +54,11 @@
                     <img class="search_result_photo" data-id="search-result-photo"
                         src="src/img/close-up-plate-grilled-stake-decorated-vegetable-table-plate-medium-rare-steak-dark-red-color-318679771.webp"
                         alt="search_result_photo">
-                </a>
+                </a> -->
             </div>        
-        </div>
+        </div>        
 
-    </div>
+    </div>    
     <div class="random_meal_container">
     <div class="random_meal">
         <img class="random_meal_text" src="src/img/risk it for the biscuit.svg">
@@ -64,7 +66,14 @@
                         src="src/img/Foto-random.svg"
                         alt="foto_random">
     </div>
-    </div>
+    </div>    
+    <input type="text" id="pokemonName">
+    <button onclick="fetchData()">fetchPokemon</button>
+    <img alt="Pokemon" id="pokemonSprite" style="display: none;">
+    <h1><a href="/src/pages/test.html">Test</a></h1>
+    <a href="/src/pages/testing_little.html">testing  testing_little</a>
+    <script src="/src/js/test.js"></script>
+    <script src="/src/js/pokemon_test.js"></script>
     
 </body>
 

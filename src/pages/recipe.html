@@ -19,7 +19,7 @@
                 <img src="/src/img/logo_recipe_realm.svg" alt="logo recipe realm">
             </div>
 
-            <div class="recipe_title">
+            <div id="recipe_title" class="recipe_title">
 
             </div>
 
@@ -28,26 +28,26 @@
                     <div class="recipe-detail-container-icon">
                         <img src="/src/img/time.svg">
                     </div>
-                    <p>30 min</p>
+                    <p><span id="tiempo"></span> min</p>
                 </div>
                 <div class="recipe-detail-container expend">
                     <div class="recipe-detail-container-icon">
                         <img src="/src/img/expend.svg">
                     </div>
-                    <p>163.15 $ per serving</p>
+                    <p><span id="recipe_expend"></span> $ per serving</p>
                 </div>
                 <div class="recipe-detail-container kcal">
                     <div class="recipe-detail-container-icon">
                         <img style="height: 70px;" src="/src/img/kcal.svg">
                     </div>
-                    <p>450/kcal</p>
+                    <p><span id="calorias"></span>/kcal</p>
                 </div>
 
             </div>
             <div class="recipe_ingredients">
                 <h3 class="recipe_subtitle">Ingredients</h3>
                 <ul>
-                    <li>12 oz dry spaghetti noodles</li>
+                    <li id="Ingredientes">12 oz dry spaghetti noodles</li>
                     <li>3 tbsp olive oil</li>
                     <li>3 cloves garlic, minced</li>
                     <li>2 cups cherry tomatoes, halved</li>
@@ -55,7 +55,8 @@
             </div>
             <div class="recipe_directions">
                 <h3 class="recipe_subtitle">Directions</h3>
-                <div class="recipe_directions_group">
+                <div class="recipe_directions_group" id="recipe_directions_group">
+                    <div class="recipe_directions_step" id="recipe_directions_step">test</div>
                     <div class="recipe_directions_step">
                         <div class="recipe_direction_step_number">
                             <p>1</p>
@@ -92,8 +93,9 @@
         </div>
 
 
-        <div class="recipe_image"><img
+        <div class="recipe_image"><img id="recipe-detail-photo"
                 src="/src/img/vert--italian-pasta-bolognese-with-meat-and-tomato-2023-11-27-05-15-14-utc.jpg"></div>
     </div>
+    <script src="../js/testing_little.js"></script>
 </body>
 </html>

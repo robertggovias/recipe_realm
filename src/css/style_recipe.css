@@ -24,12 +24,19 @@
     --font-family-robotocondensed-bolditalic: "RobotoCondensed-BoldItalic", Helvetica;
     --font-family-robotocondensed-lightitalic: "RobotoCondensed-LightItalic", Helvetica;
     --font-family-robotocondensed-regular: "RobotoCondensed-Regular", Helvetica;
+    --font-family-robotocondensed-black: "RobotoCondensed-Black", Helvetica;
   }
 @font-face {
     font-family: "RobotoCondensed-BoldItalic";
     font-style: italic;
     font-weight: 400;
     src: local('src/fonts/robotocondensed-bolditalic.ttf') format("truetype");
+  }
+  @font-face {
+    font-family: "RobotoCondensed-Black";
+    font-style: normal;
+    font-weight: 500;
+    src: local('src/fonts/RobotoCondensed-Black.ttf') format("truetype");
   }
   
   @font-face {
@@ -91,8 +98,14 @@
     align-self: center;
     display: flex;
     flex-direction: row;    
-    align-content: space-around;    
-    
+    align-content: space-around;        
+}
+.recipe_title{
+    font-family: RobotoCondensed-Black, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20pt;
+    margin-top: -15px;
+    margin-bottom: 33px;
 }
 .recipe-detail-container{
     display: flex;
