@@ -1,9 +1,10 @@
 const miApiKey = "e0f6e22e1f944acaaec181c9e011de7b";
+const recipeId = 648506;
 function pepe(){
     window.open("../pages/recipe.html")}
     
 
-fetch(`https://api.spoonacular.com/recipes/716429/information?apiKey=${miApiKey}`)
+fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${miApiKey}`)
     .then(escucha => escucha.json())
     .then((creandoObjeto)=> {      
         document.getElementById("recipe-detail-photo").src = creandoObjeto.image;
@@ -13,11 +14,9 @@ fetch(`https://api.spoonacular.com/recipes/716429/information?apiKey=${miApiKey}
         
         document.getElementById("calorias").textContent= creandoObjeto.healthScore;
 
-        document.getElementById("recipe_directions_step").textContent = creandoObjeto.instructions;
-
         document.getElementById("Ingredientes").innerHTML=creandoObjeto.extendedIngredients.map(ingredient=>ingredient.original).join('</br>');
-
         
+        document.getElementById("recipe_directions_step").textContent = creandoObjeto.instructions;
     })    
   
 

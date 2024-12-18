@@ -1,7 +1,7 @@
 const apiKey = "e0f6e22e1f944acaaec181c9e011de7b";
 
 async function searchRecipes() {
-    const searchQuery = document.querySelector(".search_bar").value;
+    const searchQuery = document.getElementById("search_bar").value;
     try {
         const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}`);
         const data = await response.json();
