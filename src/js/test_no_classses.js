@@ -1,5 +1,5 @@
 const apiKey1 = "e0f6e22e1f944acaaec181c9e011de7b";
-const apiKey2 = "e0f6e22e1f944acaaec181c9e011de7b";
+const apiKey2 = "be23559293b949038f63824e1733c6b0";
 //const searchQuery = "sushi";
 
 async function searchRecipes() {
