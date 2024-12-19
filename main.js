@@ -33,16 +33,25 @@ async function searchRecipes() {
                     search_result_photo.className = "search_result_photo";
                     search_result_photo.src = recipe.image;
                     search_result_photo.alt = recipe.title;
+                     const recipeLink = document.createElement('a');
+                recipeLink.href = '#';
+                recipeLink.textContent = 'View Recipe';
+              
+             
+                recipeItem.appendChild(recipeLink);
+              
     
                     // Añadir eventos
-                    recipeItem.onclick = async function () {
-                        await showRecipe(recipe.id);
+                    recipeLink.onclick = async function() {
+                        await showRecipeDetails(recipe.id);
                     };
     
                     // Ensamblar los elementos
                     recipeItem.appendChild(search_result_title);
                     //recipeItem.appendChild(search_result_detail);
                     recipeItem.appendChild(search_result_photo);
+                    
+                    recipeItem.appendChild(recipeLink);
     
                     // Añadir al contenedor
                     recipeList.appendChild(recipeItem);
@@ -53,44 +62,25 @@ async function searchRecipes() {
 catch (error) {
     console.error("Houston tenemos un problema con el Fetch", error);
 }}
-         
+async function showRecipeDetails(recipeId) {
+    const recipeDetailsDiv = document.getElementById("recipe-details");
+    const recipeContentDiv = document.getElementById("recipe-content");
+    try {
+        const response = await fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey2}`);
+        const recipeData = await response.json();
+        recipeContentDiv.innerHTML =`
+            <h2>${recipeData.title}</h2>
+            <img src="${recipeData.image}" alt="${recipeData.title}">
+            <p><strong>Ingredients:</strong> ${recipeData.extendedIngredients.map(ingredient=>ingredient.original).join(', ')}</p>
+            <p><strong>Instructions:</strong> ${recipeData.instructions}</p>
+        `;
+        recipeDetailsDiv.style.display = "flex";
+    } catch (error) {
+        console.error("Error fetching recipe details:", error);
+    }
+}
 
-    /*    if (data.results.length === 0) {
-            recipeList.innerHTML = "<p>Sorry, we don't have it for you. You have to pay</p>";
-        } else {
-            data.results.forEach(recipe => {
-                // Crear los elementos
-                const recipeItem = document.createElement("a");
-                recipeItem.className = "search_result_element";
-                recipeItem.href = "#"; // Añadir un enlace temporal
-
-                const search_result_title = document.createElement("div");
-                //search_result_title.className = "search_result_title";
-                search_result_title.textContent = recipe.title;
-
-                //const search_result_detail = document.createElement("p");
-                //search_result_detail.className = "search_result_detail";
-                //search_result_detail.textContent = "Calories: N/A, Carbs: N/A, Fat: N/A"; // Placeholder
-
-                const search_result_photo = document.createElement("img");
-                search_result_photo.className = "search_result_photo";
-                search_result_photo.src = recipe.image;
-                search_result_photo.alt = recipe.title;
-
-                // Añadir eventos
-                recipeItem.onclick = async function () {
-                    await showRecipe(recipe.id);
-                };
-
-                // Ensamblar los elementos
-                recipeItem.appendChild(search_result_title);
-                recipeItem.appendChild(search_result_detail);
-                recipeItem.appendChild(search_result_photo);
-
-                // Añadir al contenedor
-                recipeList.appendChild(recipeItem);
-            });
-        }
-    })} catch (error) {
-        console.error("Houston tenemos un problema con el Fetch", error);
-    }*/
+function closeRecipeDetails() {
+    const recipeDetailsDiv = document.getElementById("recipe-details");
+    recipeDetailsDiv.style.display = "none";
+}
