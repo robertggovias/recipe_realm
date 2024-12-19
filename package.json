@@ -4,7 +4,8 @@
   "description": "A user-friendly platform where users can search for recipes, and quickly access detailed instructions, and nutritional data, simplifying meal preparation.",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    
+    "build": "parcel build index.html --no-scope-hoist --no-content-hash"
   },
   "author": "Robert Gerard Govia Suarez <gov19001@byui.edu>",
   "license": "ISC",
